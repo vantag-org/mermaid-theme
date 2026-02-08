@@ -1,0 +1,37 @@
+{
+  "name": "@mermaidsl",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "Mermaid theme for Starlight.",
+  "author": "Vantag",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/vantag-org/mermaidsl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vantag-org/mermaidsl.git",
+    "directory": "packages/starlight"
+  },
+  "bugs": "https://github.com/vantag-org/mermaidsl/issues",
+  "exports": {
+    ".": "./index.ts",
+    "./styles/base": "./styles/base.css",
+    "./styles/layers": "./styles/layers.css",
+    "./styles/theme": "./styles/theme.css",
+    "./schema": "./schema.ts",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.37"
+  },
+  "dependencies": {
+    "@pagefind/default-ui": "^1.4.0",
+    "astro": "^5.17.1",
+    "marked": "^17.0.1"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "mermaidsl",
+  "type": "module",
+  "version": "1.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.6.0",
+  "description": "Starlight theme",
+  "author": "Vantag",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/vantag-org/mermaidsl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanta-org/mermaidsl"
+  },
+  "bugs": "https://github.com/vanta-org/mermaidsl/issues",
+  "engines": {
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "release": "bumpp && npm publish",
+    "prepare": "simple-git-hooks",
+    "docs": "nr -C docs dev",
+    "docs:build": "nr -C docs build"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.7.1",
+    "@astrojs/starlight": "^0.37.1",
+    "astro": "^5.16.5",
+    "astro-eslint-parser": "^1.2.2",
+    "bumpp": "^10.3.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-astro": "^1.5.0",
+    "eslint-plugin-format": "^1.1.0",
+    "lint-staged": "^16.2.7",
+    "prettier-plugin-astro": "^0.14.1",
+    "simple-git-hooks": "^2.13.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
